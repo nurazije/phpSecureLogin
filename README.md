@@ -25,6 +25,7 @@ PHP Tested: 5.6.19, 7.0.11
 		2.12. User::hashPass()
 		2.13. User::printMsg()
 		2.14. User::logout()
+		2.15. User::listUsers()
 
 * * *
 
@@ -138,3 +139,7 @@ Print error msg function.
 ### 2.14. Public User::logout()
 
 Logout the user and remove it from the session.
+
+### 2.15. Public User::listUsers()
+
+Returns an array of all available users in the DB.
