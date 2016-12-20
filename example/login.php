@@ -1,5 +1,5 @@
 <?php
-require_once '../user.php';
+require_once '../class/user.php';
 require_once 'config.php';
 
 $email = strip_tags($_POST['username']);
