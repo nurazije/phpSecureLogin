@@ -51,6 +51,6 @@ if($_SESSION['user']['id'] !== ''){
 </html>
 <?php
 }else{
-	header('Location: index.htm');
+	header('Location: index.php');
 }
 ?>
