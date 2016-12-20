@@ -37,9 +37,7 @@ This [PHP Secure Login class]https://www.phpclasses.org/package/10087-PHP-Regist
 		2.13. User::printMsg()
 		2.14. User::logout()
 		2.15. User::listUsers()
-		2.16. User::loginForm()
-		2.17. User::activationForm()
-		2.18. User::registerForm()
+		2.16. User::render()
 
 * * *
 
@@ -158,14 +156,7 @@ Logout the user and remove it from the session.
 
 Returns an array of all available users in the DB.
 
-### 2.16. Public User::loginForm()
+### 2.16. Public User::render($path)
 
-Return an automatic generated HTML for login form.
-
-### 2.17. Public User::activationForm()
-
-Return an automatic generated HTML for account activation form.
-
-### 2.18. Public User::registerForm()
-
-Return an automatic generated HTML for registration form.
+Simple template rendering function
+$path	path of the template file.
