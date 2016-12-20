@@ -325,4 +325,68 @@ class User{
 		include($path);
 		return ob_get_clean();
 	}
+
+	/**
+	* Template for index head function
+	* @return void.
+	*/
+	public function indexHead() {
+		$this->render(indexHead);
+	}
+
+	/**
+	* Template for index top function
+	* @return void.
+	*/
+	public function indexTop() {
+		$this->render(indexTop);
+	}
+
+	/**
+	* Template for login form function
+	* @return void.
+	*/
+	public function loginForm() {
+		$this->render(loginForm);
+	}
+
+	/**
+	* Template for activation form function
+	* @return void.
+	*/
+	public function activationForm() {
+		$this->render(activationForm);
+	}
+
+	/**
+	* Template for index middle function
+	* @return void.
+	*/
+	public function indexMiddle() {
+		$this->render(indexMiddle);
+	}
+
+	/**
+	* Template for register form function
+	* @return void.
+	*/
+	public function registerForm() {
+		$this->render(registerForm);
+	}
+
+	/**
+	* Template for index footer function
+	* @return void.
+	*/
+	public function indexFooter() {
+		$this->render(indexFooter);
+	}
+
+	/**
+	* Template for user page function
+	* @return void.
+	*/
+	public function userPage() {
+		$this->render(userPage);
+	}
 }

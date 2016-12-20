@@ -38,6 +38,7 @@ This [PHP Secure Login class]https://www.phpclasses.org/package/10087-PHP-Regist
 		2.14. User::logout()
 		2.15. User::listUsers()
 		2.16. User::render()
+		2.17. User::indexHead(), User::indexTop(), User::loginForm(), User::activationForm(), User::indexMiddle(), User::registerForm(), User::indexFooter(), User::userPage()
 
 * * *
 
@@ -160,3 +161,7 @@ Returns an array of all available users in the DB.
 
 Simple template rendering function
 $path	path of the template file.
+
+### 2.17. Public User::indexHead(), User::indexTop(), User::loginForm(), User::activationForm(), User::indexMiddle(), User::registerForm(), User::indexFooter(), User::userPage()
+
+Template functions depending on a config file to show different parts of HTML in the examples.
