@@ -2,8 +2,9 @@
     require_once '../class/user.php';
     require_once 'config.php';
 
-    $email = Isset($_POST['email']) ? $_POST['email'] : '';
-    $code = Isset($_POST['code']) ? $_POST['code'] : '';
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $code = filter_input(INPUT_POST, 'code', FILTER_DEFAULT);
+    
     if($user->emailActivation( $email, $code)) {
         die;
     } else {

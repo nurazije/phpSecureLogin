@@ -2,8 +2,9 @@
     require_once '../class/user.php';
     require_once 'config.php';
 
-    $email = Isset($_POST['username']) ? $_POST['username'] : '';
-    $password = Isset($_POST['password']) ? $_POST['password'] : '';
+    $email = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_EMAIL);
+    $password = filter_input(INPUT_POST, 'password', FILTER_DEFAULT);
+
     if( $user->login( $email, $password) ) {
         die;
     } else {
