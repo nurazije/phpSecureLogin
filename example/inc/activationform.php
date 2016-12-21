@@ -12,7 +12,7 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript>
+<script type="text/javascript">
 	$(function() {
 		$("#activate-submit").click(function(){
 			if($("#useractivation").val() != "" && $("#activationcode").val() != "" && validateEmail($("#useractivation").val())){

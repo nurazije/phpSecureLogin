@@ -2,7 +2,7 @@
 	<input type="text" name="fname" id="fname" tabindex="1" class="form-control" placeholder="First name" value="">
 </div>
 <div class="form-group">
-	<input type="text" name="lname" id="fname" tabindex="1" class="form-control" placeholder="Last name" value="">
+	<input type="text" name="lname" id="lname" tabindex="1" class="form-control" placeholder="Last name" value="">
 </div>
 <div class="form-group">
 	<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
@@ -20,7 +20,7 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript>
+<script type="text/javascript">
 	$(function() {
 		$("#register-submit").click(function(){
 			if($("#fname").val() != "" && $("#lname").val() != "" && $("#email").val() != "" && $("#password2").val() != "" && validateEmail($("#email").val())){

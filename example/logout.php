@@ -1,9 +1,8 @@
 <?php
-require_once '../class/user.php';
-require_once 'config.php';
+    require_once '../class/user.php';
+    require_once 'config.php';
 
-$user->logout();
+    $user->logout();
 
-header('location: index.htm');
-
+    header('location: index.php');
 ?>

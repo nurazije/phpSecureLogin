@@ -1,17 +1,16 @@
 <?php
-require_once '../class/user.php';
-require_once 'config.php';
+    require_once '../class/user.php';
+    require_once 'config.php';
 
-$email = strip_tags($_POST['email']);
-$fname = strip_tags($_POST['fname']);
-$lname = strip_tags($_POST['lname']);
-$pass = strip_tags($_POST['pass']);
+    $email = Isset($_POST['email']) ? $_POST['email'] : '';
+    $fname = Isset($_POST['fname']) ? $_POST['fname'] : '';
+    $lname = Isset($_POST['lname']) ? $_POST['lname'] : '';
+    $pass = Isset($_POST['pass']) ? $_POST['pass'] : '';
 
-
-if($user->registration($email,$fname,$lname,$pass)){
-	print 'A confirmation mail has been sent, plase confirm your account registration!';
-	die;
-}else{
-	$user->printMsg();
-	die;
-}
+    if($user->registration( $email, $fname, $lname, $pass)) {
+        print 'A confirmation mail has been sent, please confirm your account registration!';
+        die;
+    } else {
+        $user->printMsg();
+        die;
+    }

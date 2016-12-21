@@ -1,13 +1,13 @@
 <?php
-require_once '../class/user.php';
-require_once 'config.php';
+    require_once '../class/user.php';
+    require_once 'config.php';
 
-$email = strip_tags($_POST['email']);
-$code = $_POST['code'];
+    $email = Isset($_POST['email']) ? $_POST['email'] : '';
+    $code = Isset($_POST['code']) ? $_POST['code'] : '';
+    if($user->emailActivation( $email, $code)) {
+        die;
+    } else {
+        $user->printMsg();
+        die;
+    }
 
-if($user->emailActivation($email,$code)){
-	die;
-}else{
-	$user->printMsg();
-	die;
-}

@@ -20,9 +20,8 @@
         <th>Email</th>
       </tr>
     </thead><tbody>
-    <?php if($_SESSION['user']['user_role'] == 2){ 
-    	$users = $user->listUsers();
-    	foreach ($users as $user) {
+    <?php if($_SESSION['user']['user_role'] == 2){
+    	foreach ($vars as $user) {
     	?>
     		<tr>
 		        <td><?=$user['fname']?></td>

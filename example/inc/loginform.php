@@ -11,7 +11,7 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript>
+<script type="text/javascript">
 	$(function() {
 		$("#login-submit").click(function(){
 			if($("#username").val() != "" && $("#password1").val() != "" && validateEmail($("#username").val())){
