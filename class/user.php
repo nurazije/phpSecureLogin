@@ -150,19 +150,25 @@ class User{
     public function emailActivation($email,$confCode){
         $pdo = $this->pdo;
         $stmt = $pdo->prepare('UPDATE users SET confirmed = 1 WHERE email = ? and confirm_code = ?');
-        if($stmt->execute([$email,$confCode])){
+        $stmt->execute([$email,$confCode]);
+        if($stmt->rowCount()>0){
             $stmt = $pdo->prepare('SELECT id, fname, lname, email, wrong_logins, user_role FROM users WHERE email = ? and confirmed = 1 limit 1');
             $stmt->execute([$email]);
             $user = $stmt->fetch();
 
             $this->user = $user;
             session_regenerate_id();
-            $_SESSION['user']['id'] = $user['id'];
-            $_SESSION['user']['fname'] = $user['fname'];
-            $_SESSION['user']['lname'] = $user['lname'];
-            $_SESSION['user']['email'] = $user['email'];
-            $_SESSION['user']['user_role'] = $user['user_role'];
-            return true;
+            if(!empty($user['email'])){
+            	$_SESSION['user']['id'] = $user['id'];
+	            $_SESSION['user']['fname'] = $user['fname'];
+	            $_SESSION['user']['lname'] = $user['lname'];
+	            $_SESSION['user']['email'] = $user['email'];
+	            $_SESSION['user']['user_role'] = $user['user_role'];
+	            return true;
+            }else{
+            	$this->msg = 'Account activitation failed.';
+            	return false;
+            }            
         }else{
             $this->msg = 'Account activitation failed.';
             return false;
