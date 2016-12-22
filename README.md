@@ -13,9 +13,10 @@ A Secure PHP7 class for basic user login and registration.
 
 Very easy to use as REST API, with AJAX and Bootstrap
 
+
 PHP Tested: 5.6.19, 7.0.11
 
-This [PHP Secure Login class]https://www.phpclasses.org/package/10087-PHP-Register-and-login-users-in-a-database-with-PDO.html is available in the [PHP Classes site]https://www.phpclasses.org
+This [PHP Secure Login class](https://www.phpclasses.org/package/10087-PHP-Register-and-login-users-in-a-database-with-PDO.html) is available in the [PHP Classes site](https://www.phpclasses.org)
 
 
 ## CONTENTS
